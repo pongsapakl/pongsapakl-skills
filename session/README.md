@@ -13,7 +13,7 @@ happened in the session and report on it.
 
 | Command | What it does |
 |---------|--------------|
-| `/session:end-gracefully` | Checks whether the session can be closed cleanly — half-done work, unresolved questions, unrecorded decisions, unverified claims, uncommitted changes. Each item comes with a recommended disposition. Read-only. |
+| `/session:end-gracefully` | Checks whether the session can be closed cleanly — half-done work, unresolved questions, promises not kept, unrecorded decisions, unverified claims, temporary state left behind, uncommitted changes. Each item comes with a recommended disposition. Read-only. |
 
 ## Why it isn't part of handover
 
@@ -35,8 +35,8 @@ a commit for uncommitted work. That's what makes it safe to run mid-session.
 
 **It runs when you're done, so it has to be short.** Verdict line, then one line
 per item, capped at five. Every item carries a disposition decided in advance —
-`WRITE` (must survive), `DROP` (safe to neglect), or `?` (your call, with a
-recommendation attached) — so closing out is confirming, not triaging.
+`DO` (an action before closing), `WRITE` (must survive), `DROP` (safe to
+neglect), or `?` (your call, with a recommendation attached) — so closing out is confirming, not triaging.
 
 **It must be willing to say "safe to close."** The obvious failure mode is
 inventing loose ends to look thorough. Pre-existing backlog isn't a loose end;

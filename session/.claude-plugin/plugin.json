@@ -1,6 +1,6 @@
 {
   "name": "session",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "Skills that operate on the conversation rather than on project files — checking whether a working session can be closed cleanly.",
   "author": {
     "name": "Pongsapak Lueangratana"
