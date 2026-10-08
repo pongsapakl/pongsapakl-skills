@@ -15,6 +15,7 @@ happened in the session and report on it.
 |---------|--------------|
 | `/session:end-gracefully` | Checks whether the session can be closed cleanly — half-done work, unresolved questions, promises not kept, unrecorded decisions, unverified claims, temporary state left behind, uncommitted changes. Each item comes with a recommended disposition. Read-only. |
 | `/session:swiss-cheese` | Audits a piece of work the session produced (design, implementation, plan, config, infra) with two or more independent fresh-context reviewers on different models, same brief, then merges their findings into one ranked list: must fix / discuss / accept as known. "We don't know what we don't know": independent layers catch different holes. Read-only; the user decides what to fix. |
+| `/session:babysit` | Watches the long-running job the session just started (backup, build, upload, migration). Polls every 5 min at first to prove it is really progressing, widens the cadence once it looks stable, reports one line per healthy check, flags a probable hang with numbers instead of killing it, honours a stop condition, ends with done/failed and removes its own watcher. No arguments needed. |
 
 ## Why it isn't part of handover
 

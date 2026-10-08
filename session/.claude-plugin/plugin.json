@@ -1,7 +1,7 @@
 {
   "name": "session",
-  "version": "0.6.0",
-  "description": "Skills that operate on the conversation and the work it produced rather than on project files — checking whether a session can be closed cleanly, and auditing a piece of work with independent fresh-context reviewers.",
+  "version": "0.7.0",
+  "description": "Skills that operate on the conversation and the work it produced rather than on project files — checking whether a session can be closed cleanly, auditing a piece of work with independent fresh-context reviewers, and babysitting a long-running job with adaptive polling.",
   "author": {
     "name": "Pongsapak Lueangratana"
   },
@@ -9,14 +9,19 @@
   "repository": "https://github.com/pongsapakl/pongsapakl-skills",
   "homepage": "https://github.com/pongsapakl/pongsapakl-skills#readme",
   "keywords": [
-    "session",
-    "review",
-    "loose-ends",
     "audit",
-    "second-opinion"
+    "babysit",
+    "long-running",
+    "loose-ends",
+    "polling",
+    "review",
+    "second-opinion",
+    "session",
+    "watch"
   ],
   "skills": [
     "./skills/end-gracefully",
-    "./skills/swiss-cheese"
+    "./skills/swiss-cheese",
+    "./skills/babysit"
   ]
 }
